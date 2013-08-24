@@ -6,6 +6,7 @@
 
 var JobServer = require("job-server"),
 	downloader = require("./downloader"),
+	config = require("config/app.js"),
 	exec = require('child_process').exec;
 
 
@@ -41,7 +42,7 @@ var execute = function(command, callback){
 var jobWorker = null;
 function initWorker(){
 
-	var worker = JobServer.createWorker({port: 8080, host:"192.168.56.1", maxqps: 3});
+	var worker = JobServer.createWorker({port: config.port, host: config.host, maxqps: config.maxqps});
 	worker.on('error', function(err){
 		console.error("Worker: ", err);
 	});
