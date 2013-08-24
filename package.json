@@ -1,0 +1,13 @@
+{
+  "name": "downloader-worker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "author": "andy@away.name",
+  "license": "GPLv2",
+  "dependencies": {
+    "job-server": "git://github.com/a696385/job-server.git",
+    "request": "~2.25.0",
+    "iconv": "~2.0.6"
+  }
+}
